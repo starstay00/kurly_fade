@@ -1,0 +1,248 @@
+@charset "UTF-8";
+@import url("./fonts.css");
+@import url("./reset.css");
+#wrap {
+  width: 100%;
+}
+
+#wrap #header {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 156px;
+}
+
+#wrap #main {
+  width: 100%;
+  margin-top: 156px;
+}
+
+#wrap #main #section1 {
+  width: 100%;
+}
+
+#wrap #main #section1 .slide-container {
+  position: relative;
+  width: 100%;
+  cursor: grab;
+}
+
+#wrap #main #section1 .slide-container .slide-view {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap {
+  width: 100%;
+  display: flex;
+  position: relative;
+  pointer-events: none;
+}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide.slide1 {
+  z-index: 3;
+  position: relative;
+}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide.slide2 {
+  z-index: 2;
+}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide.slide3 {
+  z-index: 1;
+}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide img {
+  width: auto;
+}
+
+#wrap #main #section1 .slide-container .page-btn-box {
+  z-index: 2;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 페이지 버튼 */
+#wrap #main #section1 .slide-container .page-btn-box a.page-btn {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin: 0 10px;
+  border-radius: 50%;
+  text-indent: -2000px;
+  overflow: hidden;
+  transform: scale(0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+#wrap #main #section1 .slide-container .page-btn-box a.page-btn.on {
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid rgb(255, 255, 255);
+  transform: scale(1.3);
+}
+
+#wrap #main #section1 .slide-container .next-btn { /* 다음화살표버튼 */
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  z-index: 2;
+  margin-top: -26px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+#wrap #main #section1 .slide-container .next-btn img {
+  width: 52px;
+  height: 52px;
+}
+
+#wrap #main #section1 .slide-container .prev-btn { /* 이전화살표버튼 */
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  z-index: 2;
+  margin-top: -26px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+} /* background:transparent -> 배경투명, cursor:pointer -> 커서모양 바뀜 */
+#wrap #main #section1 .slide-container .prev-btn img {
+  width: 52px;
+  height: 52px;
+  transform: rotate(180deg);
+} /*transform: rotate(180deg) -> 그림을 180도 전환 */
+#wrap #main #section1 .slide-container .next-btn {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#wrap #main #section1 .slide-container:hover .next-btn {
+  opacity: 1;
+} /* opacity 투명도(0:안보임, 1:보임), transition: opacity 1s -> 변화값 1초에 걸쳐 투명도 바꿔줌*/
+#wrap #main #section1 .slide-container .prev-btn {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#wrap #main #section1 .slide-container:hover .prev-btn {
+  opacity: 1;
+} /* hover 커서가 올라가 있을 때의 이벤트*/
+#wrap {
+  width: 100%;
+}
+#wrap #main {
+  width: 100%;
+}
+#wrap #main #section2 {
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#wrap #main #section2 .container {
+  width: 1050px;
+  margin: 0 58.5px;
+}
+#wrap #main #section2 .container .title {
+  position: relative;
+  margin: 70px 0 50px 0;
+  width: 100%;
+  color: rgb(51, 51, 51);
+}
+#wrap #main #section2 .container .title h2 {
+  text-align: center;
+  font-size: 28px;
+}
+#wrap #main #section2 .container .content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  align-items: center;
+}
+#wrap #main #section2 .container .content .slide-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+}
+#wrap #main #section2 .container .content .slide-container .slide-view {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap {
+  pointer-events: none;
+  width: 4980px;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  left: 0px;
+}
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide {
+  margin: 0 7px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  transition: all 0.6s ease-in-out;
+}
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide img {
+  width: 249px;
+  height: 320px;
+}
+#wrap #main #section2 .container .content .slide-container .next-btn { /* 다음화살표버튼 */
+  position: absolute;
+  top: 130px;
+  left: 1010px;
+  z-index: 2;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+#wrap #main #section2 .container .content .slide-container .next-btn img {
+  width: 60px;
+  height: 60px;
+  transform: rotate(180deg);
+}
+#wrap #main #section2 .container .content .slide-container .prev-btn { /* 이전화살표버튼 */
+  position: absolute;
+  top: 130px;
+  right: 1010px;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+#wrap #main #section2 .container .content .slide-container .prev-btn img {
+  width: 60px;
+  height: 60px;
+}
+#wrap #main #section3 {
+  width: 100%;
+  height: 200px;
+  margin: 100px 0 0 0;
+}
+#wrap #wrap #footer {
+  width: 100%;
+}
